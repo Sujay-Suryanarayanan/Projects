@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- load the properties file sports.properties -->
+	<context:property-placeholder location="classpath:sport.properties" />
+	<!-- Define your beans here -->
+	<!-- Dependency Injection setup using constructor injection technique -->
+	<bean id="baseBall" class="com.sports.coach.BaseBallCoach">
+		<constructor-arg ref="dailyfortune"></constructor-arg>
+	</bean>
+	<bean id="track" class="com.sports.coach.TrackCoach" init-method="doMystartupstuff" destroy-method="doMyCleanupstuff">
+		<constructor-arg ref="dailyfortune"></constructor-arg>
+	</bean>
+	<bean id="tennis" class="com.sports.coach.TennisCoach">
+		<constructor-arg ref="dailyfortune"></constructor-arg>
+	</bean>
+	<bean id="soccker" class="com.sports.coach.SoccerCoach">
+		<constructor-arg ref="dailyfortune"></constructor-arg>
+	</bean>
+	<!-- Dependency Injection setup using setter injection technique -->
+	<bean id="cricket" class="com.sports.coach.CricketCoach">
+		<property name="fr" ref="dailyfortune" />
+		<property name="teamName" value="${foo.team}"></property>
+		<property name="teamEmailID" value="${foo.email}"></property>
+		<property name="teamOwner" value="{$foo.owner}"></property>
+	</bean>
+
+	<bean id="dailyfortune" class="com.sports.services.HappyFortuneService">
+	</bean>
+
+</beans>
+
+
+
+
+
