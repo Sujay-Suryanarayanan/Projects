@@ -1,0 +1,35 @@
+Polymorphism - (many forms). Greek word - root
+An entity with multiple behaviors.
+The ability of an entity to exhibit multiple behaviors.
+
+Two kinds of polymorphism in Java:
+a)Compile time Polymorphism, also static binding / early binding
+	This can be achieved by overloading concepts (method overloading,constructor overloading)
+b) Runtime Polymorphism / Dynamic Binding / late binding
+	This can be achieved by method overriding concepts.
+	
+Overloading - (i)Method overloading,(ii)Constructor overloading, (iii)operator overloading	
+(i) Method overloading - When a class contains two methods with the same name, but with different number of arguements, then these two methods are called overloaded methods.
+
+Example 1 - 
+
+Class X {
+	void m1(int a){
+	
+	}
+	void m1(int a, int b){
+	
+	}
+}
+
+Example 2 - 
+
+Class Y {
+	void m1(int a){
+	
+	}
+	void m1(char a){
+	
+	}
+}
+		

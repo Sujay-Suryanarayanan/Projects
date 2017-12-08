@@ -1,0 +1,31 @@
+A class within another class is called an Inner Class.
+Sometimes we can declare a class inside another class. Such type of classes are called Inner Classes.
+Inner classes concept introduced in Java v1.1 version to fix GUI bugs,as a part of event handling. (JIT - Just in time compiling also was introduced)
+But because of powerful features and benefits of inner classes , slowly programmers started using inner classes in regular coding as well.
+Inheritance concept makes use of parent-child relationships.
+
+Without existence of one type of object , if it is impossible to make another object to exist, then in those scenarios we need to go for inner  classes.
+
+Example 1:
+
+University consists of several Departments. Without the existence of the university, there is not chance for the Department to exists.
+Hence, we have to declare Department Class inside the university Class.
+
+Relation between outer class and inner class is not an "IS-A" relationship but "HAS-A" relationship (composition or Aggregation)
+
+Based on "position of declaration" and "behavior" all inner classes are divided into 4 categories
+(a) - Normal or Regular Inner class
+(b) - Method local inner classes
+(c) - Anonymous Inner classes
+(d) - Static nested classes 
+
+(a) - Normal/Regular Inner Classes
+If we are declaring any Named Class directly inside a class without a static modifier, such type of inner class is called is called Normal /Regular Inner class.
+the ".class" file generated for the outer class is University.class
+the ".class" file generated for the inner class is University$Inner.class
+
+Important Note: What does a JAR contain ? (Ans: It contains all of the .class files)
+If we extract a JAR file - we get a list of ".class" files.
+
+Important Note: When you execute a class without main() method you get an error ? What is that error ? 
+Ans: runtime exception - NoSuchMethodError  main()
