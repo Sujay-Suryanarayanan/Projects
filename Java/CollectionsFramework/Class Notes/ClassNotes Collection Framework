@@ -1,0 +1,235 @@
+Class Notes														
+														
+														--------------------------------------------------------------------------
+																Class 1:{Need of Collection Framework} - Durga Sir YouTube
+														--------------------------------------------------------------------------								
+										Need of Collections
+
+Definition of Arrays:
+=======================
+An array is an indexed collection of fixed number of homogeneous data elements.
+The main advantage of array is that we can represent multiple values in a single variable.
+This improves code re-usability.		
+
+(b) Limitations of Object type arrays
+======================================
+[1] Arrays are fixed in size . Once we create an array with some fixed size, there is no possibility of increasing or decreasing its size based on user requirement.
+Hence usage of arrays makes it a mandatory condition to know the size in advance which may always not be possible.
+[2] Arrays can hold only homogeneous data elements.
+		Student s = new Student[10000];
+		s[0]=new Student; //This is correct
+		s[1]=new Customer // This is incorrect
+		
+	The above problem can be resolved by using object arrays
+		Object o = new Object[10000];
+		o[0]= new Student;
+		o[1]= new Customer;
+		
+[3] Array concept is not implemented using some standard data-structure. Hence a ready-made support is not available for available.
+	For every requirement , we may have to write the code explicitly , this increases the complexity of programming.			
+		
+	
+(c) How are Collections better ?
+	=============================
+	In contrast - Collections can grow in nature. They can have both homogeneous and heterogeneous values.They also follow standard data structures.
+
+													--------------------------------------------------------------------------
+													Class 2: {Differences between arrays and collections} - Durga Sir YouTube
+													--------------------------------------------------------------------------
+Arrays (Fixed in size) but Collections (Grow in size)
+Arrays (From memory Standpoint - not recommended) but Collections (From memory standpoint are recommended)
+Arrays are recommended from performance standpoint but Collections are poor from performance standpoint.
+Arrays can hold only homogeneous elements but collections can hold both homogeneous and heterogeneous elements.
+Arrays are not based on any data structures - so no ready-made support is available but Collections are based on a standard data structure so ready-made support and a whole bunch of 
+methods are available.
+Arrays can hold both primitives and Objects but collections cannot hold primitives.											
+
+													--------------------------------------------------------------------------
+													    Class 3: {Collections and Collections Framework} - Durga Sir YouTube
+													--------------------------------------------------------------------------
+Collection: A Group of objects that can be represented as a single entity.
+Collection Framework : Defines several classes and interfaces which can be used by a group of objects as a single entity.
+Collection and Collection framework were already present in older programming languages such as C++ but they used different terminologies.
+													
+													C++                            |  Java
+													-------------------------------|---------------------
+													Container 					   | Collection
+													STL(standard Template Library  | Collection Framework 							
+
+
+													-------------------------------------------------------------------------------------------------------------------
+													    Class 4: {9 KEY Interfaces of Collection Framework - ((1))Collection Interface} - Durga Sir YouTube
+													-------------------------------------------------------------------------------------------------------------------
+Collection is the root interface of Collection Framework.						
+(1) Collection(Interface): The collection interface defines the most common methods that are applicable for any collection object.	example:[add(),remove(),contains(),isEmpty() .... etc]
+Note: There is no concrete class that implements the Collection Interface directly.
+
+
+													---------------------------------------------------------------------------------
+													    Class 5: {Difference between Collection and Collections} - Durga Sir YouTube
+													---------------------------------------------------------------------------------
+Collection is an interface which can be used to represent a group of classes as a single entity <==> Collections is an utility Class present in java.util.package to define several utility
+methods such as sorting,searching etc for Collection objects.		
+
+													-----------------------------------------------------------------------------------------------------------
+													    Class 6: {9 KEY Interfaces of Collection Framework - ((2))List Interface} - Durga Sir YouTube
+													-----------------------------------------------------------------------------------------------------------											
+(1)List is a child interface of Collection (List extents Collection)
+(2) If we want to represent a group of objects as a single entity where duplicates are allowed and insertion order needs to be preserved then we need to go for List interface implementation.
+
+																			
+																			Collection(Interface) (Java 1.2)	
+																						|
+																						|
+																						|
+																						|
+									--------------------------------------------------------------------------------------------------------													
+																						|
+																		     List(Interface) (Java 1.2)
+																		     			|
+																		     			|
+									-----------------------------------------------------------------------------------------------------------							
+									|													|													|
+									|													|													|
+									|													|									     			|
+								Linked List(Class)(Java 1.2)						ArrayList(Class)(Java 1.2)								Vector(Class)(Java 1.0) hence Legacy
+																																			|
+																																			|									
+																																			|
+																																		Stack(Class)(Java 1.0) hence Legacy	
+																																		
+							
+Vector and Stack classes were re-engineered in Java 1.2 to implement List Interface	
+
+
+													----------------------------------------------------------------------------------------------
+													    Class 7: {9 KEY Interfaces of Collection Framework - (()3)Set Interface} - Durga Sir YouTube
+													----------------------------------------------------------------------------------------------
+(1) Set is a child Interface of Collection.	(Set extents Collection)	
+(2) If we want to represent a group of objects as a single entity where duplicates are not allowed and insertion order not preserved then we can go for Set.
+																								
+
+																								
+																			
+																			Collection(Interface) (Java 1.2)	
+																						|
+																						|
+																						|
+																						|
+        ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------													
+        |																	      		|
+Set(Interface) (Java 1.2)													 List(Interface) (Java 1.2)
+		|																     			|
+		|																     			|
+		|							-----------------------------------------------------------------------------------------------------------							
+	HashSet(Java 1.2)				|													|													|
+		|							|													|													|
+		|							|													|									     			|
+		|						Linked List(Class)(Java 1.2)						ArrayList(Class)(Java 1.2)								Vector(Class)(Java 1.0) hence Legacy
+	LinkedHashSet(Java 1.4)																													|
+																																			|									
+																																			|
+																																		Stack(Class)(Java 1.0) hence Legacy	
+																																		
+
+													---------------------------------------------------------------------------------
+													    Class 8: {Differences between list and set} - Set - Durga Sir YouTube
+													---------------------------------------------------------------------------------	
+													
+																List																Set
+														-----------------------------------------------------------------------------------
+														(1)		Duplicates are allowed							Duplicates are not allowed.
+														(2)		Insertion order preserved.						Insertion order not preserved.	
+
+
+													-----------------------------------------------------------------------------------------------------------------
+													    Class 9: {9 KEY Interfaces of Collection Framework - ((4))SortedSet Interface} - Durga Sir YouTube
+													------------------------------------------------------------------------------------------------------------------
+
+(1)It is the child interface of Set.
+(2)If we want to represent a group of objects as a single entity where duplicates are not allowed but all objects need to be inserted in some sorting order
+ then we need to go for SortedSet.
+ 
+ 
+													-----------------------------------------------------------------------------------------------------------------
+													    Class 10: {9 KEY Interfaces of Collection Framework - ((5))NavigableSet Interface} - Durga Sir YouTube
+													------------------------------------------------------------------------------------------------------------------
+(1)NavigableSet is the child interface of SortedSet.
+(2)It defines several methods for navigation purposes.													
+ 
+																			
+																			Collection(Interface) (Java 1.2)	
+																						|
+																						|
+																						|
+																						|
+        ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------													
+        |																	      		|
+Set(Interface)(Java 1.2)													 List(Interface) (Java 1.2)
+		|			|													     			|
+		|			|													     			|
+		|			|				-----------------------------------------------------------------------------------------------------------							
+	HashSet			|				|													|													|
+   (Java 1.2			|				|													|													|
+		|			|				|													|									     			|
+		|			|			Linked List(Class)(Java 1.2)						ArrayList(Class)(Java 1.2)								Vector(Class)(Java 1.0) hence Legacy
+LinkedHashSet		|																											            |
+ (Java 1.4)			|																														|									
+					|																														|
+					|																													Stack(Class)(Java 1.0) hence Legacy	
+					|																													
+ 			SortedSet(Interface) (Java1.2)
+ 					|
+ 					|
+ 					|
+ 			NavigableSet(Interface) (Java1.6)
+ 					|		
+ 					|
+ 				TreeSet(Class) (Java1.2)
+ 				
+ 				
+ 						
+
+													-----------------------------------------------------------------------------------------------------------------
+													    Class 8: {9 KEY Interfaces of Collection Framework - ((6)) - Queue} - Durga Sir YouTube
+													------------------------------------------------------------------------------------------------------------------ 
+(1) It is a child object of Collection.
+(2) If we want to represent a group of objects prior to processing, then we should go for implementing the queue interface.	
+
+
+																			
+																			Collection(Interface) (Java 1.2)	
+																						|
+																						|
+																						|
+																						|
+        ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------												
+        |																	      		|																							|
+Set(Interface)(Java 1.2)													 List(Interface) (Java 1.2)																					|
+		|			|													     			|																							|
+		|			|													     			|																							|
+		|			|				-----------------------------------------------------------------------------------------------------------							       Queue(Interface) (Java 1.5)
+	HashSet			|				|													|													|												|
+   (Java 1.2			|				|													|													|												|
+		|			|				|													|									     			|												|
+		|			|			Linked List(Class)(Java 1.2)						ArrayList(Class)(Java 1.2)								Vector(Class)(Java 1.0) hence Legacy			-------------------------			
+LinkedHashSet		|																											            |										| 						|
+ (Java 1.4)			|																														|										|						|
+					|																														|									PriorityQueue(Class)      BlockingQueue(Class)
+					|																													Stack(Class)(Java 1.0) hence Legacy		   (Java 1.5)				(Java 1.5)	
+					|																																															|
+ 			SortedSet(Interface) (Java1.2)																																										|
+ 					|																																													---------------------
+ 					|																																													|					|
+ 					|																																								  LinkedBlockingQueue(Class)      PriorityBlockingQueue(Class)					
+ 			NavigableSet(Interface) (Java1.6)																																				(Java 1.5)  						(Java 1.5)
+ 					|		
+ 					|
+ 				TreeSet(Class) (Java1.2)
+ 				
+Note: (1) All the above interfaces mentioned above are meant for representing a group of individual objects.
+	  (2) If we want to represent a group of objects as key-value pairs then we should go for map interface.
+
+
+	  	 																																																		
+																																		
