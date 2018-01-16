@@ -29,3 +29,5 @@ If we extract a JAR file - we get a list of ".class" files.
 
 Important Note: When you execute a class without main() method you get an error ? What is that error ? 
 Ans: runtime exception - NoSuchMethodError  main()
+
+Inside inner class we cannot declare any static methods. Hence we cannot declare a main method and we cannot run inner class directly from command prompt.
