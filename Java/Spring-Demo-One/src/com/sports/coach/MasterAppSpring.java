@@ -1,6 +1,5 @@
 package com.sports.coach;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MasterAppSpring {
 
